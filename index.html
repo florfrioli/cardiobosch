@@ -1,1 +1,527 @@
-Hello World
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <title>Cardio Bosch</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="img/icono.png"type="image/x-icon">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+  body {
+    font: 400 15px Lato, sans-serif;
+    line-height: 1.8;
+    color: #818181;
+  }
+  h2 {
+    font-size: 24px;
+    text-transform: uppercase;
+    color: #303030;
+    font-weight: 600;
+    margin-bottom: 30px;
+  }
+  h4 {
+    font-size: 19px;
+    line-height: 1.375em;
+    color: #303030;
+    font-weight: 400;
+    margin-bottom: 30px;
+  }  
+  .jumbotron {
+    background-color: #E12B21;
+    color: #fff;
+    padding: 100px 25px;
+    font-family: Montserrat, sans-serif;
+  }
+  .container-fluid {
+    padding: 60px 50px;
+  }
+  .bg-grey {
+    background-color: #f6f6f6;
+  }
+  .logo-small {
+    color: #CF3027;
+    font-size: 50px;
+  }
+  .logo {
+    color:#CF3027;
+    font-size: 200px;
+  }
+  .thumbnail {
+    padding: 0 0 15px 0;
+    border: none;
+    border-radius: 0;
+  }
+  .thumbnail img {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 10px;
+  }
+  .carousel-control.right, .carousel-control.left {
+    background-image: none;
+    color: #CF3027;
+  }
+  .carousel-indicators li {
+    border-color: #CF3027;
+  }
+  .carousel-indicators li.active {
+    background-color: #CF3027;
+  }
+  .item h4 {
+    font-size: 19px;
+    line-height: 1.375em;
+    font-weight: 400;
+    font-style: italic;
+    margin: 70px 0;
+  }
+  .item span {
+    font-style: normal;
+  }
+  .panel {
+    border: 1px solid#AB2E37; 
+    border-radius:0 !important;
+    transition: box-shadow 0.5s;
+  }
+  .panel:hover {
+    box-shadow: 5px 0px 40px rgba(0,0,0, .2);
+  }
+  .panel-footer .btn:hover {
+    border: 1px solid#AB2E37;
+    background-color: #fff !important;
+    color:#E12B21;
+  }
+  .panel-heading {
+    color: #fff !important;
+    background-color: #E12B21 !important;
+    padding: 25px;
+    border-bottom: 1px solid transparent;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+  }
+  .panel-footer {
+    background-color: white !important;
+  }
+  .panel-footer h3 {
+    font-size: 32px;
+  }
+  .panel-footer h4 {
+    color: #aaa;
+    font-size: 14px;
+  }
+  .panel-footer .btn {
+    margin: 15px 0;
+    background-color:#AB2E37;
+    color: #fff;
+  }
+  .navbar {
+    margin-bottom: 0;
+    background-color: #AB2E37;
+    z-index: 9999;
+    border: 0;
+    font-size: 12px !important;
+    line-height: 1.42857143 !important;
+    letter-spacing: 4px;
+    border-radius: 0;
+    font-family: Montserrat, sans-serif;
+  }
+  .navbar li a, .navbar .navbar-brand {
+    color: #fff !important;
+  }
+  .navbar-nav li a:hover, .navbar-nav li.active a {
+    color: #E12B21 !important;
+    background-color: #fff !important;
+  }
+  .navbar-default .navbar-toggle {
+    border-color: transparent;
+    color: #fff !important;
+  }
+  footer{
+    background-color: #AB2E37;
+    color: white;
+  }
+  footer .glyphicon {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #E12B21;
+  }
+  #contacto a{
+      color:#AB2E37;
+  }
+  .slideanim {visibility:hidden;}
+  .slide {
+    animation-name: slide;
+    -webkit-animation-name: slide;
+    animation-duration: 1s;
+    -webkit-animation-duration: 1s;
+    visibility: visible;
+  }
+  @keyframes slide {
+    0% {
+      opacity: 0;
+      transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+  }
+  @-webkit-keyframes slide {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      -webkit-transform: translateY(0%);
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .col-sm-4 {
+      text-align: center;
+      margin: 25px 0;
+    }
+    .btn-lg {
+      width: 100%;
+      margin-bottom: 35px;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .logo {
+      font-size: 150px;
+    }
+  }
+  </style>
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#myPage">CardioBosch</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#nosotros">NOSOTROS</a></li>
+        <li><a href="#especialidades">ESPECIALIDADES</a></li>
+        <li><a href="#servicios">SERVICIOS</a></li>
+        <li><a href="#contacto">CONTACTO</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="jumbotron text-center">
+  <h1>Cardio Bosch</h1> 
+  <p>Centro médico integral - Equipo multidisciplinario</p> 
+
+</div>
+
+<!-- Container (About Section) -->
+<div id="nosotros" class="container-fluid">
+  <div class="row">
+    <div class="col-sm-8">
+      <h2>SOBRE NOSOTROS</h2><br>
+      <h4>Nuestro principal objetivo como profesionales es brindarles la mejor calidad de atención médica y humana. Somos un equipo multidisciplinario orientado a la atención de nuestros pacientes en diversas especialidades.</h4><br>
+      <p>Contamos con consultas presenciales y virtuales, atendemos distintas obras sociales y particulares. Contamos con un gimnasio para realizar distintas actividades de rehabilitación y descenso de peso. Nos encontrás en Villa Bosch!</p>
+      <br><a href="#especialidades"><button class="btn btn-default btn-lg">Conocé nuestras especialidades</button></a>
+    </div>
+    <div class="col-sm-4">
+        <img src="img/LOGO.jpg" style="height: 400px; width: 400px;" alt="">    
+    </div>
+  </div>
+
+<br>
+<br>
+<!-- Container (especialidades Section) -->
+    <h4>Nuestras instalaciones</h4>
+    <div class="row text-center slideanim">
+      <div class="col-sm-4">
+        <div class="thumbnail">
+          <img src="img/lugar1.jpg" alt="Frente" width="400" height="300">
+          <p><strong>Entrada</strong></p>
+          <p>Ambiente climatizado.</p>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="thumbnail">
+          <img src="img/lugar2.jpg" alt="New York" width="400" height="300">
+          <p><strong>Sala de espera</strong></p>
+          <p>Amplia sala de espera para nuestros pacientes</p>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="thumbnail">
+          <img src="img/lugar3.jpg" alt="San Francisco" width="400" height="300">
+          <p><strong>Consultorio 1</strong></p>
+          <p>Equipado para la mejor atención de nuestros pacientes</p>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="thumbnail">
+          <img src="img/lugar4.jpg" alt="Frente" width="400" height="300">
+          <p><strong>Consultorio 2</strong></p>
+          <p>Equipado para la mejor atención de nuestros pacientes</p>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="thumbnail">
+          <img src="img/lugar5.jpg" alt="Frente" width="400" height="300">
+          <p><strong>Gimnasio</strong></p>
+          <p>Equipado para rehabilitación cardiovascular</p>
+        </div>
+      </div>
+    </div><br>
+
+  </div>
+
+
+<!-- Container (Services Section) -->
+<div id="especialidades" class="container-fluid text-center">
+  <h2>ESPECIALIDADES</h2>
+  <h4>A continuación te contamos que especialidades médicas atendemos en Cardio Bosch</h4>
+  <br>
+  <div class="row slideanim">
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-heart logo-small"></span>
+      <h4>CARDIOLOGÍA</h4>
+      <p>Consulta médica - Estudios cardiológicos - Apto Físico</p>
+    </div>
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-apple logo-small"></span>
+      <h4>NUTRICIÓN</h4>
+      <p>Planes personalizados de descenso de peso</p>
+    </div>
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-heart-empty logo-small"></span>
+      <h4>REHABILITACIÓN</h4>
+      <p>Cardiovascular - online y presencial</p>
+    </div>
+  </div>
+  <br><br>
+  <div class="row slideanim">
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-cloud logo-small"></span>
+      <h4>PSICOLOGÍA</h4>
+      <p>Terapia cognitivo conductual - Niños y adultos</p>
+    </div>
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-ok-sign logo-small"></span>
+      <h4>DIABETOLOGÍA</h4>
+      <p>Atención médica en consultorio</p>
+    </div>
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-wrench logo-small"></span>
+      <h4 style="color:#303030;">TRAUMATOLOGÍA</h4>
+      <p>Atención médica en consultorio</p>
+    </div>
+  </div>
+  <br><br>
+
+  <div class="row slideanim">
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-cutlery logo-small"></span>
+      <h4>GASTROENTEROLOGÍA</h4>
+      <p>Atención médica en consultorio</p>
+    </div>
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-education logo-small"></span>
+      <h4>CLÍNICA</h4>
+      <p>Atención médica en consultorio</p>
+    </div>
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-grain logo-small"></span>
+      <h4 style="color:#303030;">FLEBOLOGÍA</h4>
+      <p>Atención médica en consultorio - Tratamiento de várices</p>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- Container (Pricing Section) -->
+<div id="servicios" class="container-fluid">
+  <div class="text-center">
+    <h2>Servicios</h2>
+    <h4>Para más información no dudes en consultarnos.</h4>
+  </div>
+  <div class="row slideanim">
+    <div class="col-sm-4 col-xs-12">
+      <div class="panel panel-default text-center">
+        <div class="panel-heading">
+          <h1>Consulta médica</h1>
+        </div>
+        <div class="panel-body">
+          <p>Atención a diversas <strong>obras sociales y prepagas</strong></p>
+          <p>Atención a <strong>particulares</strong></p>
+          <p>Contamos con historia clínica digital</p>
+          <p>Consultas presenciales y virtuales</p>
+          <p>Con <strong>turnos</strong> previos</p>
+        </div>
+        <div class="panel-footer">
+          <button class="btn btn-lg">Más información</button>
+        </div>
+      </div>      
+    </div>     
+    <div class="col-sm-4 col-xs-12">
+      <div class="panel panel-default text-center">
+        <div class="panel-heading">
+          <h1>Estudios</h1>
+        </div>
+        <div class="panel-body">
+          <p><strong>Ecografías</strong></p>
+          <p>Ecocardiograma <strong>doppler</strong> color</p>
+          <p><strong>Presurometría</strong> (Mapa 24 hs)</p>
+          <p><strong>Holter</strong> (24 hs - 3 canales)</p>
+          <p><strong>Electrocardiograma</strong></p>
+          <p>Evaluación de <strong>riesgo</strong> cardiovascular</p>
+        </div>
+        <div class="panel-footer">
+          <button class="btn btn-lg">Más información</button>
+        </div>
+      </div>      
+    </div>       
+    <div class="col-sm-4 col-xs-12">
+      <div class="panel panel-default text-center">
+        <div class="panel-heading">
+          <h1>Plan integral</h1>
+        </div>
+        <div class="panel-body">
+          <p>Plan personalizado mensual que incluye:</p>
+          <p><strong>Consulta cardiológica</strong></p>
+          <p><strong>Consulta nutricional</strong></p>
+          <p><strong>Actividad física semanal</strong></p>
+          <p><strong>Seguimiento profesional orientado a resultados</strong></p>
+        </div>
+        <div class="panel-footer">
+          <button class="btn btn-lg">Más información</button>
+        </div>
+      </div>      
+    </div>    
+  </div>
+</div>
+
+<!-- Container (Contact Section) -->
+<div id="contacto" class="container-fluid bg-grey">
+  <h2 class="text-center">CONTACTO</h2>
+  <div class="row">
+    <div class="col-sm-5">
+      <p><strong> Trataremos de asesorarte y despejar tus dudas a la brevedad</strong></p>
+      <p><span class="glyphicon glyphicon-map-marker"></span> Villa Bosch, Buenos Aires</p>
+      <p><span class="glyphicon glyphicon-phone"></span> 11 7366-5211</p>
+      <p><span class="glyphicon glyphicon-phone-alt"></span> 4844-2730</p>
+      <p><span class="glyphicon glyphicon-envelope"></span>  <a href="mailto:cardiobosch@gmail.com">cardiobosch@gmail.com</a></p>
+      <p><span class="glyphicon glyphicon-globe"></span><a href="https://www.instagram.com/cardiobosch" title="Seguinos en instagram"> Instagram</a></p>
+    </div>
+    <div class="col-sm-7 slideanim">
+      <div class="row">
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="name" name="name" placeholder="Nombre" type="text" required>
+        </div>
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+        </div>
+      </div>
+      <textarea class="form-control" id="comments" name="comments" placeholder="Consulta" rows="5"></textarea><br>
+      <div class="row">
+        <div class="col-sm-12 form-group">
+          <button class="btn btn-danger pull-right" type="submit">Enviar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Image of location/map -->
+<span><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.79968680265!2d-58.58026968519584!3d-34.583934763957785!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb9b5101d9945%3A0x9b4f8e8d8fb71886!2sCardioBosch!5e0!3m2!1ses-419!2sar!4v1607439740423!5m2!1ses-419!2sar" width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe></span>
+
+
+<footer class="container-fluid text-center">
+  <a href="#myPage" title="Al inicio">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a>
+  <p>Volver</p>
+</footer>
+
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 900, function(){
+
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+
+  $(window).scroll(function() {
+    $(".slideanim").each(function(){
+      var pos = $(this).offset().top;
+
+      var winTop = $(window).scrollTop();
+        if (pos < winTop + 600) {
+          $(this).addClass("slide");
+        }
+    });
+  });
+})
+</script>
+
+</body>
+</html>
+
+<!--<h2>What our customers say</h2>
+    <div id="myCarousel" class="carousel slide text-center" data-ride="carousel">
+       Indicators 
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+      </ol>
+  
+       Wrapper for slides 
+      <div class="carousel-inner" role="listbox">
+        <div class="item active">
+          <h4>"This company is the best. I am so happy with the result!"<br><span>Michael Roe, Vice President, Comment Box</span></h4>
+        </div>
+        <div class="item">
+          <h4>"One word... WOW!!"<br><span>John Doe, Salesman, Rep Inc</span></h4>
+        </div>
+        <div class="item">
+          <h4>"Could I... BE any more happy with this company?"<br><span>Chandler Bing, Actor, FriendsAlot</span></h4>
+        </div>
+      </div>
+  
+      Left and right controls 
+      <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>--> 
